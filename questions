@@ -1,0 +1,14 @@
+A rendre aujourd'hui via email :
+1--- Ajouter les deux méthodes abstraites suivantes à la classe Client :
+
+    •payer facture : les entreprises ont le droit de payer par chèque
+    •réclamation : communiquer le secteur d’activité d’entreprise
+
+2--- Ecrire deux classes Particulier et Entreprise héritant de la classe Client
+–Ajouter les attributs suivants aux classes Entreprise
+
+    •Num Patente
+    •Type de société
+    •Secteur d’activité
+
+Tester ces deux classes
