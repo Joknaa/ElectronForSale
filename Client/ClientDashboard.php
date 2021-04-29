@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../CSS/Menu.css"/>
+    <link rel="stylesheet" href="../CSS/ClientMenu.css"/>
     <meta charset='utf-8'>
   <title>CLIENT DASHBOARD</title>
 </head>
 <body>
-<?php include "../Include/Menu.php"; ?>
+<?php include "../Include/ClientMenu.php"; ?>
 
 <header>
   <form>

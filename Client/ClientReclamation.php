@@ -10,12 +10,12 @@ $id_client = intval($_GET['id']);
 <html>
 <head>
     <link rel="stylesheet" href="../CSS/ClientReclamation.css">
-    <link rel="stylesheet" href="../CSS/Menu.css">
+    <link rel="stylesheet" href="../CSS/ClientMenu.css">
     <meta charset='utf-8'>
     <title>Accueil</title>
 </head>
 <body>
-<?php include "../Include/Menu.php"; ?>
+<?php include "../Include/ClientMenu.php"; ?>
 
 <div class="user">
     <form method="POST">

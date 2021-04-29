@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.menu-bar {
+    background: #aad6ee;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #204636;
+}
+
+.menu-bar ul li {
+    width: 120px;
+    margin: 5px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #204636;
+}
+
+.menu-bar ul li:hover {
+    background: #7ca8c1;
+    cursor: pointer;
+}

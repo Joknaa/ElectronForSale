@@ -15,7 +15,7 @@ $id_client = intval($_GET['id']);
     <title>Client Space</title>
 </head>
 <body>
-<?php include "../Include/Menu.php"; ?>
+<?php include "../Include/ClientMenu.php"; ?>
 
 <center>
     <h1>Liste des factures</h1>
