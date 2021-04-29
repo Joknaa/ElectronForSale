@@ -1,24 +1,24 @@
 <?php
-require "Scripts/S_AddConsumption.php";
+require "../Scripts/S_AddConsumption.php";
 
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "facturation");
 if ($conn->connect_error) die("failed to connect :" . $conn->connect_error);
 
-if (!isset($_GET['id'])) header('Location: ClientLogin.php');
+if (!isset($_GET['id'])) header('Location: ../Login.php');
 $id_client = intval($_GET['id']);
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/ClientAddConsumption.css">
-    <link rel="stylesheet" href="CSS/Menu.css"/>
+    <link rel="stylesheet" href="../CSS/ClientAddConsumption.css">
+    <link rel="stylesheet" href="../CSS/Menu.css"/>
     <meta charset='utf-8'>
     <title>Accueil</title>
 </head>
 <body>
-<?php include "Include/Menu.php"; ?>
+<?php include "../Include/Menu.php"; ?>
 <div class="user">
     <form method="POST">
         <center>

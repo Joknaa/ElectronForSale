@@ -22,7 +22,7 @@ function PrintBillsList(mysqli $conn, $id_client){
             echo '<td data-label="Prix (TTC)">' . $result['prix_ttc'] . 'DH</td>';
             echo '<td data-label="Date de Saisie">' . $result['date_facture'] . '</td>';
             echo '<td data-label="Etat">' . $result['etat_facture'] . '</td>';
-            echo '<td data-label="Action"><form action="Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$result['id_facture'].'" method="POST">';
+            echo '<td data-label="Action"><form action="../Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$result['id_facture'].'" method="POST">';
             echo '<input type="submit" name="PayerCheque" value="Cheque ">';
             echo '<input type="submit" name="PayerEspece" value="Espece"></form></td></tr>';
             $rows--;
@@ -40,7 +40,7 @@ function PrintBillsList(mysqli $conn, $id_client){
 function PayBill(mysqli $conn, $Facture_ID){
     if (isset($_POST['PayerCheque'])) echo "Payement Espece";
     elseif (isset($_POST['PayerEspece'])) echo "Payement par Cheque";
-    else header('Location: ClientLogin.php');
+    else header('Location: ../Login.php');
 
     $stmt = "UPDATE facturation.facture SET etat_facture=1 WHERE id_facture = " . $Facture_ID;
     if ($conn->query($stmt) === TRUE) header("Location: " . $_SERVER['HTTP_REFERER']);

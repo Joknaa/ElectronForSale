@@ -1,7 +1,7 @@
 <?php
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "facturation");
-if (!isset($_GET['id'])) header('Location: ClientLogin.php');
+if (!isset($_GET['id'])) header('Location: ../Login.php');
 $id_client = intval($_GET['id']);
 
 
@@ -19,13 +19,13 @@ if ($stmt_result->num_rows > 0) {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/Menu.css"/>
-    <link rel="stylesheet" href="CSS/ClientInfo.css"/>
+    <link rel="stylesheet" href="../CSS/Menu.css"/>
+    <link rel="stylesheet" href="../CSS/ClientInfo.css"/>
     <meta charset='utf-8'>
     <title>Accueil</title>
 </head>
 <body>
-<?php include "Include/Menu.php"; ?>
+<?php include "../Include/Menu.php"; ?>
 <div class="user">
     <h1> Client Info </h1><br>
     Nom:<span class="nom"> <?php echo $_SESSION['NOM_CLIENT']; ?> </span><br><br>

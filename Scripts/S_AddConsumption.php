@@ -24,7 +24,7 @@ function AddConsumption(mysqli $conn, $Client_ID){
                                                                STR_TO_DATE(?,'%Y-%m-%d'));");
 
     $stmt->bind_param("s", $Date);
-    if ($stmt->execute()) header('location:client.php?id=' . $Client_ID);
+    if ($stmt->execute()) header('location: client.php?id=' . $Client_ID);
     else echo "Error: " . $stmt . " <br> " . $conn->error;
 }
 

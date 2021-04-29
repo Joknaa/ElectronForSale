@@ -1,21 +1,21 @@
 <?php
-require "Scripts/S_BillingTable.php";
+require "../Scripts/S_BillingTable.php";
 
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "facturation");
-if (!isset($_GET['id']))  header('Location: ClientLogin.php');
+if (!isset($_GET['id']))  header('Location: ../Login.php');
 $id_client = intval($_GET['id']);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/Client.css"/>
+    <link rel="stylesheet" href="../CSS/Client.css"/>
     <meta charset='utf-8'>
     <title>Client Space</title>
 </head>
 <body>
-<?php include "Include/Menu.php"; ?>
+<?php include "../Include/Menu.php"; ?>
 
 <center>
     <h1>Liste des factures</h1>

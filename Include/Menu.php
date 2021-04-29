@@ -11,7 +11,7 @@
         <li><a href="ClientInfo.php?id=<?php echo $id_client; ?>">Compte</a></li>
         <li><a href="Client.php?id=<?php echo $id_client; ?>">Factures</a></li>
         <li><a href="ClientReclamation.php?id=<?php echo $id_client; ?>">Reclamation</a></li>
-        <li><a href="ClientLogin.php" class="deconnexion">Déconnexion</a></li>
+        <li><a href="../Login.php" class="deconnexion">Déconnexion</a></li>
     </ul>
 </div>
 </body>

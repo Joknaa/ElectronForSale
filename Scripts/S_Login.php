@@ -15,7 +15,7 @@ function LoginClient(mysqli $conn){
     if ($stmt_client_result->num_rows > 0) {
         $result = $stmt_client_result->fetch_assoc();
         if ($result['MDP_CLIENT'] === $pass) {
-            header('location: Client.php?id=' . $result["id_client"]);
+            header('location: Client/Client.php?id=' . $result["id_client"]);
             echo "login successfully";
         } else echo "invalide email or password";
     } else if ($stmt2_fournisseur_result->num_rows > 0) {

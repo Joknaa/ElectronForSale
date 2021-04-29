@@ -8,6 +8,6 @@ function AddReclamation(mysqli $conn, $Client_ID){
     $stmt = "INSERT INTO facturation.reclamation(id_client, subject, message , EMAIL, id_fournisseur)
  VALUES ('$Client_ID', '$subject', '$body','$email', $Fournisseur_ID);";
 
-    if ($conn->query($stmt) === TRUE) echo "done"; #header('location:client.php?id=' . $Client_ID);
+    if ($conn->query($stmt) === TRUE) header('location: client.php?id=' . $Client_ID);
     else echo "Error: " . $stmt . " <br> " . $conn->error;
 }
