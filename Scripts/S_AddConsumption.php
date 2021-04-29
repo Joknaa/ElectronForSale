@@ -5,7 +5,8 @@ function AddConsumption(mysqli $conn, $Client_ID){
     $Date = "".date('Y')."-".$_POST["month"]."-01";
     $Consumption = $_POST['consommation'];
     $TVA = 14 / 100;
-
+    //todo: Add a column 'Verified' to the Facture table.
+    //todo: Compare the real consumption and the estimated one; and move the differance to the next bill.
     if ($Consumption <= 0): {
         echo "Please write a Consumption greater than 0";
         exit();
