@@ -5,15 +5,15 @@ if (!isset($_GET['id'])) header('Location: ../Login.php');
 $id_client = intval($_GET['id']);
 
 
-$stmt = $conn->prepare("SELECT * FROM facturation.client WHERE id_client = ? ");
+$stmt = $conn->prepare("SELECT * FROM facturation.client WHERE ID = ? ");
 $stmt->bind_param("s", $id_client);
 $stmt->execute();
 $stmt_result = $stmt->get_result();
 if ($stmt_result->num_rows > 0) {
     $result = $stmt_result->fetch_assoc();
-    $_SESSION['NOM_CLIENT'] = $result['NOM_CLIENT'];
-    $_SESSION['PRENOM_CLIENT'] = $result['PRENOM_CLIENT'];
-    $_SESSION['EMAIL_CLIENT'] = $result['EMAIL_CLIENT'];
+    $_SESSION['NOM_CLIENT'] = $result['Nom'];
+    $_SESSION['PRENOM_CLIENT'] = $result['Prenom'];
+    $_SESSION['EMAIL_CLIENT'] = $result['Email'];
 }
 ?>
 <!DOCTYPE html>
