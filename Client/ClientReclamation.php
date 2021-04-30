@@ -9,22 +9,24 @@ $id_client = intval($_GET['id']);
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../CSS/ClientReclamation.css">
+    <link rel="stylesheet" href="../CSS/Import/DialogBox.css">
     <link rel="stylesheet" href="../CSS/ClientMenu.css">
     <meta charset='utf-8'>
-    <title>Accueil</title>
+    <title>Ajouter Reclamation</title>
 </head>
 <body>
 <?php include "../Include/ClientMenu.php"; ?>
 
-<div class="user">
+<div class="Div_Input">
     <form method="POST">
         <center>
-            <h1> Reclamation </h1><br>
+            <h1> Reclamation </h1>
+            <hr>
+            <br>
             <input class="input" type="email" name="email" placeholder="email" required><br>
             <input class="input" type="text" name="subject" placeholder="Subject" required><br>
             <textarea class="input" name="body" placeholder="Write your reclamation here" required></textarea><br>
-            <input type="Submit" name="submit" value="envoyer">
+            <input class="submit" type="Submit" name="submit" value="envoyer">
         </center>
     </form>
 </div>

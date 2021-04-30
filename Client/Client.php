@@ -12,7 +12,7 @@ $id_client = intval($_GET['id']);
 <head>
     <link rel="stylesheet" href="../CSS/Client.css"/>
     <meta charset='utf-8'>
-    <title>Client Space</title>
+    <title>Client</title>
 </head>
 <body>
 <?php include "../Include/ClientMenu.php"; ?>

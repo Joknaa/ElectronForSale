@@ -7,11 +7,11 @@
 </head>
 <body>
 <div class="menu-bar">
-    <ul>
-        <li><a href="ClientInfo.php?id=<?php echo $id_client; ?>">Compte</a></li>
-        <li><a href="Client.php?id=<?php echo $id_client; ?>">Factures</a></li>
-        <li><a href="ClientReclamation.php?id=<?php echo $id_client; ?>">Reclamation</a></li>
-        <li><a href="../Login.php" class="deconnexion">Déconnexion</a></li>
+    <ul class="UL_Menu">
+        <a href="ClientInfo.php?id=<?php echo $id_client; ?>"><li>Compte</li></a>
+        <a href="Client.php?id=<?php echo $id_client; ?>"><li>Factures</li></a>
+        <a href="ClientReclamation.php?id=<?php echo $id_client; ?>"><li>Reclamation</li></a>
+        <a href="../Login.php" class="Btn_Logout"><li>Déconnexion</li></a>
     </ul>
 </div>
 </body>

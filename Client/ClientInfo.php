@@ -19,18 +19,19 @@ if ($stmt_result->num_rows > 0) {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../CSS/ClientMenu.css"/>
-    <link rel="stylesheet" href="../CSS/ClientInfo.css"/>
+    <link rel="stylesheet" href="../CSS/Import/DialogBox.css"/>
     <meta charset='utf-8'>
-    <title>Accueil</title>
+    <title>Profile</title>
 </head>
 <body>
 <?php include "../Include/ClientMenu.php"; ?>
-<div class="user">
-    <h1> Client Info </h1><br>
-    Nom:<span class="nom"> <?php echo $_SESSION['NOM_CLIENT']; ?> </span><br><br>
-    Prénom:<span class="prenom"> <?php echo $_SESSION['PRENOM_CLIENT']; ?> </span><br><br>
-    Email:<span class="email"> <?php echo $_SESSION['EMAIL_CLIENT']; ?> </span>
+<div class="Div_Input">
+    <h1> Client Info </h1>
+    <hr>
+    <br>
+    <label class="Label">Nom: <?php echo $_SESSION['NOM_CLIENT']; ?></label><br><br>
+    <label class="Label">Prenom: <?php echo $_SESSION['PRENOM_CLIENT']; ?></label><br><br>
+    <label class="Label">Email: <?php echo $_SESSION['EMAIL_CLIENT']; ?></label>
 </div>
 </body>
 <html>

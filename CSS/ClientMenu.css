@@ -1,38 +1,41 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-}
-
+@import "Import/Variables.css";
 .menu-bar {
-    background: #aad6ee;
+    font-family: TitilliumWeb-Regular;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
+.UL_Menu{
+    width: 500px;
+    border: 1px black solid;
+    background: var(--MainDiv);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
-.menu-bar ul {
     display: inline-flex;
     list-style: none;
-    color: #204636;
-}
-
-.menu-bar ul li {
-    width: 120px;
-    margin: 5px;
     padding: 5px;
+}
+
+.menu-bar ul a {
+    width: 160px;
     transition: 0.5s;
-}
-
-.menu-bar ul li a {
     text-decoration: none;
-    color: #204636;
+    color: var(--H1);
 }
 
-.menu-bar ul li:hover {
-    background: #7ca8c1;
+.menu-bar ul a:hover {
+    background: var(--H1);
+    color: var(--BackGround);
     cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.Btn_Logout li:hover {
+    background: var(--BackGround);
+    color: var(--H1);
+    transition: 0.5s;
+    border-radius: 20px;
+    border: 1px black solid;
+
 }

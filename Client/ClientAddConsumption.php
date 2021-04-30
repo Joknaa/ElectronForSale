@@ -12,33 +12,37 @@ $id_client = intval($_GET['id']);
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../CSS/ClientAddConsumption.css">
+    <link rel="stylesheet" href="../CSS/Import/DialogBox.css">
     <link rel="stylesheet" href="../CSS/ClientMenu.css"/>
     <meta charset='utf-8'>
-    <title>Accueil</title>
+    <title>Ajouter Consommation</title>
 </head>
 <body>
 <?php include "../Include/ClientMenu.php"; ?>
-<div class="user">
+<div class="Div_Input">
     <form method="POST">
         <center>
-            <h1> Saisie de consommation </h1><br>
-            <select name="month">
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-            <input class="input" type="text" name="consommation" placeholder="consommation" required><br>
-            <input type="Submit" name="submit" value="submit">
+            <h1> Saisie de consommation </h1>
+            <hr>
+            <br>
+            <label>
+                <select class="submit" name="month">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <input class="input" type="text" name="consommation" placeholder="consommation" required>
+            </label><br>
+            <input class="submit" type="Submit" name="submit" value="submit">
         </center>
     </form>
 </div>

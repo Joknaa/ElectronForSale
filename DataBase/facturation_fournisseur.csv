@@ -1,1 +1,2 @@
-id_fournisseur,prenom_fourniss,nom_fourniss,email_fourniss,mdp_fourniss
+ID,Prenom,Nom,Email,Password
+1,,,fourn@f,1

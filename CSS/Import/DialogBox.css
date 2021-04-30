@@ -1,0 +1,104 @@
+@import "Variables.css";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background: var(--BackGround);
+}
+
+.Div_Input {
+    font-weight: bolder;
+    font-family:  sans-serif;
+    background: var(--MainDiv);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate( -50%, -50%);
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 30px;
+    border: 1px black solid;
+}
+h1 {
+    /* Text */
+    color: var(--H1);
+    font-family: Leahlee_Sans;
+    font-weight: bolder;
+    font-size: 50px;
+    /* Borders and Sizes*/
+}
+
+.input {
+    /* BackGround Stuff */
+    background: none;
+    outline: none;
+    display: block;
+    /* Borders and Sizes*/
+    margin: 10px auto;
+    padding: 15px 10px;
+    border: 1px solid var(--Button);
+    border-radius: 100px;
+    width: 200px;
+    height: 5px;
+    /* Text */
+    text-align: center;
+    color: #000;
+    /* Animations */
+    transition: 0.5s;
+}
+.input:focus {
+    /* Borders and Sizes*/
+    width: 220px;
+    height: 15px;
+    border-width: 5px;
+    /* Animations */
+    transition: 0.5s;
+}
+.input:hover {
+    /* Borders and Sizes*/
+    border-width: 5px;
+    /* Animations */
+    transition: 0.5s;
+}
+
+.submit, .Btn_Back {
+    text-decoration: none;
+    font-family: TitilliumWeb-Regular;
+    outline: none;
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--BackGround);
+    background: var(--Button);
+    padding: 10px 10px;
+    border: 3px solid var(--Button);
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.submit:hover, .Btn_Back:hover {
+    background: var(--ButtonHover);
+    border-color: var(--ButtonHover);
+    color: var(--BackGround);
+}
+.Btn_Back {
+    width: 70px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.Div_Input textarea {
+    border-radius: 20px;
+    height: 60px;
+}
+.Div_Input textarea:focus {
+    border-radius: 20px;
+    height: 60px;
+}
+
+.Label{
+    font-family: TitilliumWeb-Regular;
+}
