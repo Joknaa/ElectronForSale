@@ -15,25 +15,25 @@ function PrintBillsList(mysqli $conn, $id_client){
     if ($stmt_result->num_rows > 0) {
         $rows = $stmt_result->num_rows;
         do {
-            $result = $stmt_result->fetch_assoc();
-            echo '<tr><td data-label="Facture N°">' . $result['id_facture'] . '</td>';
-            echo '<td data-label="Compteur">' . $result['consommation'] . 'KWH</td>';
-            echo '<td data-label="Prix (HT)">' . $result['prix_ht'] . 'DH</td>';
-            echo '<td data-label="Prix (TTC)">' . $result['prix_ttc'] . 'DH</td>';
-            echo '<td data-label="Date de Saisie">' . $result['date_facture'] . '</td>';
-            echo '<td data-label="Etat">' . $result['etat_facture'] . '</td>';
-            echo '<td data-label="Action"><form action="../Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$result['id_facture'].'" method="POST">';
+            $Facture = $stmt_result->fetch_assoc();
+            echo '<tr><td data-label="Facture N°">' . $Facture['ID'] . '</td>';
+            echo '<td data-label="Compteur">' . $Facture['consommation'] . 'KWH</td>';
+            echo '<td data-label="Prix (HT)">' . $Facture['prix_ht'] . 'DH</td>';
+            echo '<td data-label="Prix (TTC)">' . $Facture['prix_ttc'] . 'DH</td>';
+            echo '<td data-label="Date de Saisie">' . $Facture['Date'] . '</td>';
+            echo '<td data-label="Etat">' . $Facture['Paid'] . '</td>';
+            echo '<td data-label="Action"><form action="../Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$Facture['ID'].'" method="POST">';
             echo '<input type="submit" name="PayerCheque" value="Cheque ">';
             echo '<input type="submit" name="PayerEspece" value="Espece"></form></td></tr>';
             $rows--;
         } while ($rows > 0);
     } else {
-        $_SESSION['ID_FACTURE'] = "---";
+        $_SESSION['ID'] = "---";
         $_SESSION['CONSOMMATION'] = "---";
         $_SESSION['PRIX_HT'] = "---";
         $_SESSION['PRIX_TTC'] = "---";
-        $_SESSION['DATE_FACTURE'] = "---";
-        $_SESSION['ETAT_FACTURE'] = "---";
+        $_SESSION['Date'] = "---";
+        $_SESSION['Paid'] = "---";
     }
 }
 
@@ -42,7 +42,7 @@ function PayBill(mysqli $conn, $Facture_ID){
     elseif (isset($_POST['PayerEspece'])) echo "Payement par Cheque";
     else header('Location: ../Login.php');
 
-    $stmt = "UPDATE facturation.facture SET etat_facture=1 WHERE id_facture = " . $Facture_ID;
+    $stmt = "UPDATE facturation.facture SET Paid = 1 WHERE ID = " . $Facture_ID;
     if ($conn->query($stmt) === TRUE) header("Location: " . $_SERVER['HTTP_REFERER']);
     else echo "Error: " . $stmt . " <br> " . $conn->error;
 }

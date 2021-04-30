@@ -1,5 +1,5 @@
 <?php
-require "../Scripts/S_AddConsumption.php";
+require "../Scripts/S_Consumption.php";
 
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "facturation");

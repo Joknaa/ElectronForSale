@@ -1,13 +1,15 @@
 <?php
+require "../Scripts/S_Consumption.php";
 session_start();
 $conn = mysqli_connect("localhost", "root", "", "facturation");
-if (!isset($_GET['id']))  header('Location: ../Login.php');
+if (!isset($_GET['id'])) header('Location: ../Login.php');
 $Provider_ID = intval($_GET['id']);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../CSS/ProviderConsumptionVerification.css"/>
     <meta charset="UTF-8">
     <title>Consumption Verification</title>
 </head>
@@ -15,24 +17,31 @@ $Provider_ID = intval($_GET['id']);
 <?php include "../Include/ProviderMenu.php"; ?>
 
 <center>
-    <h1>Liste des factures</h1>
-    <button><a href="ClientAddConsumption.php?id=<?php echo $Provider_ID; ?>"> Ajouter Facture </a></button>
+    <br>
+    <h1>Liste des Consommations</h1>
+    <br>
+
+    <form method="POST">
+        <label> Clients:
+            <select name="clients">
+                <?php PrintClientList($conn); ?>
+            </select>
+        </label>
+        <input type="Submit" name="submit_SelectClient" value="Select">
+    </form>
     <table>
         <thead>
         <tr>
+            <th>Client N°</th>
             <th>Facture N°</th>
-            <th>Compteur</th>
-            <th>Prix (HT)</th>
-            <th>Prix (TTC)</th>
-            <th>Date de Saisie</th>
-            <th>Etat</th>
+            <th>Date</th>
+            <th>Consommation Entree</th>
+            <th>Consommation Real</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <?php
-        #PrintBillsList($conn, $Provider_ID);
-        ?>
+        <?php if (isset($_POST["submit_SelectClient"])) PrintConsumptionsList($conn, $_POST["clients"]);?>
         </tbody>
     </table>
 </center>
