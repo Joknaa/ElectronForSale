@@ -26,7 +26,8 @@ $id_client = intval($_GET['id']);
             <input class="input" type="email" name="email" placeholder="email" required><br>
             <input class="input" type="text" name="subject" placeholder="Subject" required><br>
             <textarea class="input" name="body" placeholder="Write your reclamation here" required></textarea><br>
-            <input class="submit" type="Submit" name="submit" value="envoyer">
+            <input class="submit" type="Submit" name="submit" value="Envoyer">
+            <a class="Btn_Back" href="Client.php?id=<?php echo $id_client ?>">Annuler</a>
         </center>
     </form>
 </div>

@@ -21,6 +21,8 @@
     transition: 0.5s;
     text-decoration: none;
     color: var(--H1);
+    border: 1px var(--MainDiv) solid;
+    border-radius: 2px;
 }
 
 .menu-bar ul a:hover {
@@ -28,14 +30,15 @@
     color: var(--BackGround);
     cursor: pointer;
     border-radius: 20px;
-
 }
 
+.Btn_Logout li{
+    border: 1px var(--MainDiv) solid;
+}
 .Btn_Logout li:hover {
     background: var(--BackGround);
     color: var(--H1);
     transition: 0.5s;
+    border-color: black;
     border-radius: 20px;
-    border: 1px black solid;
-
 }

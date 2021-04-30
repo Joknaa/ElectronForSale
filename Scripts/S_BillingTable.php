@@ -22,9 +22,9 @@ function PrintBillsList(mysqli $conn, $id_client){
             echo '<td data-label="Prix (TTC)">' . $Facture['prix_ttc'] . 'DH</td>';
             echo '<td data-label="Date de Saisie">' . $Facture['Date'] . '</td>';
             echo '<td data-label="Etat">' . $Facture['Paid'] . '</td>';
-            echo '<td data-label="Action"><form action="../Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$Facture['ID'].'" method="POST">';
-            echo '<input type="submit" name="PayerCheque" value="Cheque ">';
-            echo '<input type="submit" name="PayerEspece" value="Espece"></form></td></tr>';
+            echo '<td data-label="Action"><center><form action="../Scripts/S_BillingTable.php?Client_ID='.$id_client.'&Facture_ID='.$Facture['ID'].'" method="POST">';
+            echo '<input class="submit_Pay" type="submit" name="PayerCheque" value="Cheque">';
+            echo '<input class="submit_Pay" type="submit" name="PayerEspece" value="Espece"></form></center></td></tr>';
             $rows--;
         } while ($rows > 0);
     } else {

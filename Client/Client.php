@@ -18,8 +18,12 @@ $id_client = intval($_GET['id']);
 <?php include "../Include/ClientMenu.php"; ?>
 
 <center>
+    <br>
+    <br>
     <h1>Liste des factures</h1>
-    <button><a href="ClientAddConsumption.php?id=<?php echo $id_client; ?>"> Ajouter Facture </a></button>
+    <form action="ClientAddConsumption.php?id=<?php echo $id_client; ?>" method="POST">
+        <input class="submit_Add" type="submit" name="submit_AjouterFacture" value="Ajouter">
+    </form>
     <table>
         <thead>
         <tr>

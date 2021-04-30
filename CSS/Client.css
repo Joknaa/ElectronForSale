@@ -1,81 +1,42 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-}
+@import "Import/DialogBox.css";
 
 *::before, *::after {
     box-sizing: border-box;
 }
 
 table {
+    font-family: TitilliumWeb-Regular;
     width: 80%;
     border-collapse: collapse;
     margin: 20px auto;
 }
-
 th, td {
     padding: 5px;
-    text-align: left;
-    border: solid 1px #fff;
+    text-align: center;
 }
-
 th {
-    background-color: #4d7991;
+    background-color: var(--BordersHeader);
     color: #fff;
-}
+    border: solid 1px var(--BackGround);
 
+}
 tr:nth-child(odd) {
-    background-color: #eee;
+    background-color: var(--TableOdd);
 }
 
-input[type="Submit"] {
-    background: none;
+.submit_Pay, .submit_Add {
+    color: var(--BordersHeader);
+    background-color: var(--BackGround);
+    border: 1px solid var(--BordersHeader);
     font-weight: bold;
-    border: none;
+    padding: 3px;
+    margin: 3px;
+    width: 80px;
+    border-radius: 10px;
+    display: inline;
 }
-
-input[type="Submit"]:hover {
-    color: #4d7991;
+.submit_Pay:hover, .submit_Add:hover {
+    color: var(--BackGround);
+    background-color: var(--BordersHeader);
     cursor: pointer;
-}
-
-@media only  screen and (max-width: 700px) {
-    table, thead, tbody, tr, th, td {
-        display: block;
-    }
-
-    thead {
-        display: none;
-    }
-
-    td:nth-child(odd) {
-        background-color: #eee;
-    }
-
-    td {
-        padding-left: 150px;
-        position: relative;
-        margin-top: -1px;
-        background: #fff;
-    }
-
-    td::before {
-        padding: 5px;
-        content: attr(data-label);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 130px;
-        bottom: 0;
-        background-color: #4d7991;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-    }
 }

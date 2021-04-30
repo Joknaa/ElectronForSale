@@ -42,7 +42,8 @@ $id_client = intval($_GET['id']);
                 </select>
                 <input class="input" type="text" name="consommation" placeholder="consommation" required>
             </label><br>
-            <input class="submit" type="Submit" name="submit" value="submit">
+            <input class="submit" type="Submit" name="submit" value="Submit">
+            <a class="Btn_Back" href="Client.php?id=<?php echo $id_client ?>">Annuler</a>
         </center>
     </form>
 </div>

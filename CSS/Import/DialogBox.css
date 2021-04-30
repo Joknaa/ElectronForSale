@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
+    font-family: TitilliumWeb-Regular;
     background: var(--BackGround);
 }
 
@@ -85,7 +85,7 @@ h1 {
     color: var(--BackGround);
 }
 .Btn_Back {
-    width: 70px;
+    width: 100px;
     margin-top: 10px;
     padding: 0;
 }
