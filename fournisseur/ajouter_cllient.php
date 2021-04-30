@@ -8,21 +8,28 @@ session_start();
 <html>
     <head>
         <meta charset='utf-8'>
-        <link rel="stylesheet" href="CSS/ajouter_client.css"/>
+        <link rel="stylesheet" href="../CSS/ajouter_client.css"/>
         <link href='logo1.png' rel='icon'>
+        
+        
         <title>Ajouter Client</title>
     </head>
     <body>
    
-    <?php include "Include/Menu.php"; ?>
+    <?php include "../Include/Menu.php"; ?>
        
-        
+    <div class="head">
+        <header>
+            <img class="logo" src="logo1.png">
+           
+        </header>
+    </div>  
 
         <h1>Ajouter Client</h1>
             <div class="login-box">
             <form action = "" method="post" id="ajouter">
         
-            <p>Nom :</p><input type="text" name="NOM_CLIENT" required><br><br>
+                <p>Nom :</p><input type="text" name="NOM_CLIENT" required><br><br>
                 <p>Prénom :</p><input type="text" name="PRENOM_CLIENT" required><br><br>
                 <p>Adresse :</p><input type="text" name="ADRESSE_CLIENT" required><br><br>
                 <p>Téléphone :</p><input type="text" name="TELEPHONE_CLIENT" required><br><br>
@@ -41,7 +48,7 @@ session_start();
                 {
                     $pass_client = $_POST['MDP_CLIENT'];
 
-                    //Pour créer une clé de hachage pour le mot de passe;
+                    // Pour créer une clé de hachage pour le mdp;
 
                     $option =[
                         'cost' => 12,
