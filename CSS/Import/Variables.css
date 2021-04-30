@@ -16,3 +16,12 @@
     --Button:        #745871;
     --TableOdd:      #eaccb7;
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: TitilliumWeb-Regular;
+    background: var(--BackGround);
+}

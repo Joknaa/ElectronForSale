@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../CSS/ClientMenu.css"/>
+    <link rel="stylesheet" href="../CSS/Menu.css"/>
     <meta charset='utf-8'>
   <title>CLIENT DASHBOARD</title>
 </head>

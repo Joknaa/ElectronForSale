@@ -9,7 +9,7 @@ $Provider_ID = intval($_GET['id']);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../CSS/ProviderConsumptionVerification.css"/>
+    <link rel="stylesheet" href="../CSS/Consumption.css"/>
     <meta charset="UTF-8">
     <title>Consumption Verification</title>
 </head>
@@ -27,7 +27,7 @@ $Provider_ID = intval($_GET['id']);
                 <?php PrintClientList($conn); ?>
             </select>
         </label>
-        <input type="Submit" name="submit_SelectClient" value="Select">
+        <input class="submit_Confirme" type="Submit" name="submit_SelectClient" value="Select">
     </form>
     <table>
         <thead>
@@ -41,7 +41,7 @@ $Provider_ID = intval($_GET['id']);
         </tr>
         </thead>
         <tbody>
-        <?php if (isset($_POST["submit_SelectClient"])) PrintConsumptionsList($conn, $_POST["clients"]);?>
+        <?php if (isset($_POST["submit_SelectClient"])) PrintConsumptionsList($conn,$Provider_ID, $_POST["clients"]);?>
         </tbody>
     </table>
 </center>

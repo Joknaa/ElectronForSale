@@ -13,7 +13,7 @@ $id_client = intval($_GET['id']);
 <html>
 <head>
     <link rel="stylesheet" href="../CSS/Import/DialogBox.css">
-    <link rel="stylesheet" href="../CSS/ClientMenu.css"/>
+    <link rel="stylesheet" href="../CSS/Menu.css"/>
     <meta charset='utf-8'>
     <title>Ajouter Consommation</title>
 </head>

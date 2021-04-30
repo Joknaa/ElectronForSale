@@ -22,7 +22,7 @@ $id_client = intval($_GET['id']);
     <br>
     <h1>Liste des factures</h1>
     <form action="ClientAddConsumption.php?id=<?php echo $id_client; ?>" method="POST">
-        <input class="submit_Add" type="submit" name="submit_AjouterFacture" value="Ajouter">
+        <input class="submit_Confirme" type="submit" name="submit_AjouterFacture" value="Ajouter">
     </form>
     <table>
         <thead>
