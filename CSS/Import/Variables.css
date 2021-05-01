@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Leahlee_Sans;
+    src: url(../../FONT/Leahlee_Sans.ttf);
+}
+@font-face {
+    font-family: TitilliumWeb-Regular;
+    src: url(../../FONT/TitilliumWeb-Regular.ttf);
+}
+:root {
+    --BackGround:    #d7bba8;
+    --MainDiv:       #CCA78F;
+    --BordersHeader: #3E2A35;
+    --Borders:       #553A49;
+    --H1:            #4B3B40;
+    --ButtonHover:   #3D2934;
+    --Button:        #745871;
+    --TableOdd:      #eaccb7;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: TitilliumWeb-Regular;
+    background: var(--BackGround);
+}

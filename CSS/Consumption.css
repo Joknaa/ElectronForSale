@@ -1,0 +1,6 @@
+@import "Import/DialogBox.css";
+@import "Import/Table.css";
+
+.input_RealConsumption{
+    background-color: var(--BackGround);
+}

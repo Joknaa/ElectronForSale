@@ -1,0 +1,36 @@
+table {
+    font-family: TitilliumWeb-Regular;
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: var(--BordersHeader);
+    color: #fff;
+    border: solid 1px var(--BackGround);
+
+}
+tr:nth-child(odd) {
+    background-color: var(--TableOdd);
+}
+
+.submit_Confirme {
+    color: var(--BordersHeader);
+    background-color: var(--BackGround);
+    border: 1px solid var(--BordersHeader);
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    width: 80px;
+    border-radius: 10px;
+    display: inline;
+}
+.submit_Confirme:hover {
+    color: var(--BackGround);
+    background-color: var(--BordersHeader);
+    cursor: pointer;
+}
