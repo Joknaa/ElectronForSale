@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+session_start();
+$conn = mysqli_connect("localhost", "root", "", "facturation");
+
+if (!isset($_GET['id'])) header('Location: ../Login.php');
+$Provider_ID = intval($_GET['id']);
+?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -37,7 +43,6 @@
                 </thead>
                 <tbody>
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "facturation");
 
                 $stmt = $conn->prepare('SELECT * FROM facturation.client ORDER BY ID ASC');
                 $stmt->execute();
