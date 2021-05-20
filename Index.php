@@ -8,7 +8,7 @@
 <body>
 <center>
     <div class="Div_Input">
-        <a class="submit" href="">Fournisseur</a>
+        <a class="submit" href="Login.php">Fournisseur</a>
         <br>
         <a class="submit" href="Login.php">Client</a>
     </div>

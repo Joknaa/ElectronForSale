@@ -34,6 +34,10 @@ $result = $conn->query("SELECT ID From facturation.client ");
         </select>
         <input type="submit" name="submit" value="Submit"/>
     </form>
+    <form action="../Scripts/filetotable.php" method="GET">
+        <input type="file" name="fileUploader"/>
+        <input type="submit" name="AddFile"/>
+    </form>
     <h3>Liste des annees</h3>
 
     <table>
@@ -41,7 +45,6 @@ $result = $conn->query("SELECT ID From facturation.client ");
         <tr>
             <th>year</th>
             <th>Annual consumption</th>
-            <th>credit</th>
             <th>Action</th>
         </tr>
         </thead>

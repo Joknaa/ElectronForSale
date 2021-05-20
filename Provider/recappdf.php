@@ -26,11 +26,12 @@ $Client_ID = intval($_GET["Client_ID"])?>
     $stmt->bind_param("i", $Client_ID);
     $stmt->execute();
     $stmt_result = $stmt->get_result();
+
     if ($stmt_result->num_rows > 0) {
         $rows = $stmt_result->num_rows;
         do {
             $row = $stmt_result->fetch_assoc();
-            echo '<tr><td>' . $row['Nom'] . '</td>';
+            echo '<tr><td>' . $row['ID'] . '</td>';
             echo '<td>' . $row['Prenom'] . '</td>';
             echo '<td >' . $row['Email'] . '</td>';
             echo '<td>' . $row['Adresse'] . '</td>';

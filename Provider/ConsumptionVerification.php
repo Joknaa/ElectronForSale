@@ -29,6 +29,9 @@ $Provider_ID = intval($_GET['id']);
         </label>
         <input class="submit_Confirme" type="Submit" name="submit_SelectClient" value="Select">
     </form>
+    <form method="POST">
+        <input class="submit_Confirme" type="Submit" name="submit_verify" value="Verifier">
+    </form>
     <table>
         <thead>
         <tr>
@@ -36,12 +39,16 @@ $Provider_ID = intval($_GET['id']);
             <th>Facture N°</th>
             <th>Date</th>
             <th>Consommation Entree</th>
-            <th>Consommation Real</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <?php if (isset($_POST["submit_SelectClient"])) PrintConsumptionsList($conn,$Provider_ID, $_POST["clients"]);?>
+        <?php if (isset($_POST["submit_SelectClient"])) {
+            $Client_ID = $_POST["clients"];
+            PrintConsumptionsList($conn,$Provider_ID, $_POST["clients"]);
+            ConfirmeConsumption($conn,$Provider_ID, $Client_ID);
+        }
+        ?>
         </tbody>
     </table>
 </center>

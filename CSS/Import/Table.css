@@ -33,4 +33,21 @@ tr:nth-child(odd) {
     color: var(--BackGround);
     background-color: var(--BordersHeader);
     cursor: pointer;
+
+
+}.submit_Confirme2 {
+    color: var(--BordersHeader);
+    background-color: var(--BackGround);
+    border: 1px solid var(--BordersHeader);
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+    width: 160px;
+    border-radius: 10px;
+    display: inline;
+}
+.submit_Confirme2:hover {
+    color: var(--BackGround);
+    background-color: var(--BordersHeader);
+    cursor: pointer;
 }

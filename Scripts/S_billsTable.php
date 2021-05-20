@@ -31,7 +31,6 @@ function PrintYearsList(mysqli $conn, $id_client)
             $result = $stmt_result->fetch_assoc();
             echo '<tr><td data-label="year">' . $result['year'] . '</td>';
             echo '<td data-label="Annual consumption">' . $result['consomation'] . 'KWH</td>';
-            echo '<td data-label="Credit">' . $result['dept'] . 'DH</td>';
             echo '<td data-label="Action"><form action="recappdf.php?Client_ID=' . $id_client . '" method="POST">';
 
             echo '<input type="submit" name="bill" value="Generate Bill"></form></td></tr>';
@@ -43,25 +42,20 @@ function PrintYearsList(mysqli $conn, $id_client)
         $_SESSION['PRIX_HT'] = "---";
         $_SESSION['ETAT_FACTURE'] = "---";
     }
-
-
 }
 
+function generateBill(mysqli $conn, $id_client){
+    $stmt = $conn->prepare("UPDATE facturation.consombyyear SET consomation =consomation+dept WHERE dept IN(SELECT dept FROM facturation.client WHERE id_client =?)");
+    $stmt->bind_param("i", $id_client);
+    $stmt->execute();
 
-function generateBill(mysqli $conn, $id_client)
-{
-    $year = 2021;
-    $stmt = "UPDATE facturation.consombyyear SET consomation =consomation+dept WHERE dept IN(SELECT dept FROM  consombyyear WHERE id_client =? AND year=$year)";
-
-    if ($conn->query($stmt) === TRUE) {
+    if ($stmt->execute() === TRUE) {
         header("Location: " . $_SERVER['HTTP_REFERER']);
         echo "dept updated successfully !";
     } else {
         echo "Error: " . $stmt . " <br> " . $conn->error;
     }
-
 }
-
 
 function CalculateNewDept(mysqli $conn, $Facture_ID)
 {
